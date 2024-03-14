@@ -15,7 +15,7 @@ app.use(express.static('public'))
 app.use(indexRouter)
 console.log("hello")
 const mongoose=require('mongoose')
-mongoose.connect(process.env.DATABASE_URL)
+mongoose.connect(process.env.NEXT_PUBLIC_DATABASE_URL)
 const db=mongoose.connection
 //console.log(process.env.NODE_ENV)
 db.on('error',error=>console.error(error))
